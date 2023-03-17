@@ -1,4 +1,5 @@
 from clases import Case
+from clases import Conventions
 from itertools import product, repeat
 from random import choice
 
@@ -18,6 +19,7 @@ def __init__(self, longitud):
         num2l = Conventions.generar_num_linea
         num2c = Conventions.generar_num_columna
 
+def horizontal(self):
         while True:
             if self.orientacion == HORIZONTAL:
                 rang = choice(range(num_lineas))
@@ -35,6 +37,8 @@ def __init__(self, longitud):
                 self.casillas = {Case.instances[l + c]
                               for l, c in product(letras, repeat(cifra, longitud))}
 
+def instancair(self):
+
             for existente in Barco.instances:
                 if self.casillas.intersection(existente.casillas):
                     break  # break relativo al "for existente in barcos:"
@@ -48,7 +52,14 @@ def __init__(self, longitud):
                 Barco.casillas_ocupadas |= self.casillas
                 break  # break relativo al "while True:"
 
-@classmethod
-def generar_barcos(cls):
+def generar_barcos(self):
         for longitud in Conventions.barcos_longitud:
-            Barco(longitud)
+            while True:
+                barco = Barco(longitud)
+                barco.horizontal()
+                barco.instancair()
+                
+@classmethod
+def generar_barcos(self.cls):
+        for longitud in Conventions.barcos_longitud:
+            self.longitud = longitud

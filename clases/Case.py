@@ -1,7 +1,7 @@
-from Tablero import *
-from Barco import *
-from Conventions import *
-
+from clases import Barco
+from clases import Case
+from clases import Conventions
+from clases import Tablero
 
 instances = {}
 jugadas = set()
@@ -22,7 +22,7 @@ def __init__(self, x, y):
   self.jugada = False
   self.barco = None  # No toca a un barco de momento.
 
-def _generar_nombre(self):
+def generar_nombre(self):
   """Este método puede ser sobrecargado fácilmente"""
   self.nombre = generar_nombre_casilla(self.x, self.y)
 

@@ -3,13 +3,7 @@ import sys
 from clases import Barco
 from clases import Case
 from clases import Tablero
-from itertools import cycle, chain, product, repeat
-from functools import reduce
-from random import shuffle, choice, random
-from clases.Case import *
-from clases.Barco import *
-from clases.Tablero import *
-from clases.Conventions import *
+from clases import Conventions
 
 
 from introducir import (
