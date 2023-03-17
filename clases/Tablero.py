@@ -1,6 +1,7 @@
-from Case import *
-from Barco import *
-from Conventions import *
+from clases import Conventions
+from clases import Case
+from clases.Barco import generar_barcos
+from clases.Conventions import generar_nombre_casilla
 
 
 

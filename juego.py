@@ -1,6 +1,8 @@
 import sys
 
 from clases import Barco
+from clases import Case
+from clases import Tablero
 from itertools import cycle, chain, product, repeat
 from functools import reduce
 from random import shuffle, choice, random
@@ -59,10 +61,11 @@ def jugar_una_partida():
     """Algoritmo de una partida"""
     # Creamos un tablero de juego vacío
 
-    tablero = TaTablero()
+    tablero = Tablero()
 
     while True:
         tablero.ver()
+
 
         tablero.jugar_tirada()
 
@@ -70,6 +73,7 @@ def jugar_una_partida():
             # Si el juego ha terminado, salimos de la función
             tablero.ver()
             return
+
 
 
 def elegir_jugarOtra():
